@@ -270,6 +270,207 @@ Username - centos
 PPK - https://www.devopsschool.com/notes/docker/2019/
 		rajesh-mumbai.ppk
 
+Behaviour of the container
+===================================================
+PID 1
+
+
+PhyicalServer is running 	virutalServer is running		Container is Running coz 
+coz of				coz of					coz of
+PID 1 is running		PID 1 is running			PID 1 is running
+
+PID 1 is systemd		PID 1 is systemd			PID 1 is anything
+
+
+run
+======================
+pull + create + start + attached to container(Become a container)
+
+run -d
+======================
+pull + create + start + deattached to container(do Become a container)
+
+
+How to come out of the container saftly?
+control + p + q
+
+49  ps -eaf | grep docker
+   50  which cont
+   51  which containerd
+   52  clear
+   53  docker ifo
+   54  docker info
+   55  docker ps -a
+   56  clkear
+   57  clear
+   58  dcoker run -d jenkins
+   59  docker run -d jenkins
+   60  docker ps
+   61  ps
+   62  clear
+   63  ls
+   64  dcoker run -d ubuntu
+   65  docker run -d ubuntu
+   66  docker ps
+   67  docker ps -a
+   68  clear
+   69  docker run -it ubuntu /bin/bash
+   70  docker ps -a
+   71  clear
+   72  docker ps -a
+   73  clear
+   74  docker run -it ubuntu /bin/bash
+   75  docker ps
+   76  clear
+   77  history
+
+
+===========================================================
+How to use containers?
+=================================
+How to get inside a container?
+
+exec
+	would execute an executables inside a container
+	BUT 
+			with -it and /bin/bash - you can go inside a container
+	 79  docker ps
+   80  docker exec 7f4b182044c1 ls
+   81  clear
+   82  docker exec 7f4b182044c1 df
+   83  docker exec 7f4b182044c1 df -kh
+   84  docker exec 7f4b182044c1 dsdsd
+   85  clear
+   86  docker ps
+   87  docker exec -it 7f4b182044c1 /bin/bash
+
+
+attach 
+	would attached to an container pid 1
+
+ 91  docker attach 7f4b182044c1
+   92  clear
+   93  ls
+   94  docker ps
+   95  docker attach 0c71cacecb33
+   96  docker ps
+
+How to access from out side?
+=======================================
+docker run -d -p 8080:8080 jenkins
+docker run -d -p 8090:8080 jenkins
+
+ 98  history
+   99  clear
+  100  docker ps
+  101  docker inspect 7f4b182044c1 | grep -ip
+  102  docker inspect 7f4b182044c1 | grep -i ip
+  103  ping 172.17.0.4
+  104  clear
+
+
+
+
+  108  clear
+  109  docker run -d -p 8080:8080 jenkins
+  110  docker ps
+  111  docker stop 7f4b182044c1
+  112  docker ps
+  113  docker run -d -p 8090:8080 jenkins
+  114  clear
+  115  docker ps
+  116  docker exec -it 97149ce4b360 /bin/bash
+  117  docker history
+
+==================================================================
+==================================================================
+What is jenkins?
+	CI tools
+	CI -
+		Continous Integ
+	Free
+	Open Source
+	Written in Java
+	Hudson
+	Release
+		jenkins community - from - free -os
+		jenkins enterprise - CloudBees + Paid
+		jenkins X
+		BlueOcean
+	Powered by Plugins.
+			- plugin is feature in jenkins
+
+What is Continous Integ?
+=======================
+Auto Build --> Auto testing
+============================
+	Imm Feedback
+
+
+
+PLAN -> Code -> Analsyis -> Build -> UT -> Packaging -> Arch2Repo -> Deploy -> AT -> CodeCoevrage --> Release
+-------------------------------------------------------------------------------------------------------------
+JIRA -> Git  -> Sonar   --> Maven -> Junit -> Jar ----> Nexus ---> Ansible --> Sele -> jacoco -------
+============================================================================================================
+					Automated
+============================================================================================================	
+					Integration
+============================================================================================================
+					Continnous
+============================================================================================================
+					Imm Feedback
+=====================================================================================================
+					Jenkins
+						Continnous Integration
+						Imm Feedback
+						Scheduling 
+
+https://www.devopsschool.com/tutorial/jenkins/jenkins-installation-and-configuration.html
+How to install jenkins?
+	JDK
+		$ sudo -s
+		$ yum install java-1.8.0-openjdk-devel
+	
+	Jenkins
+
+   65  docker ps
+   66  java
+   67  yum install java-1.8.0-openjdk-devel
+   68  java
+   69  clear
+   70  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+   71  yum install wget
+   72  clear
+   73  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+   74  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+   75  yum install jenkins
+   76  systemctl start jenkins
+   77  ps -eaf | grep -i jenkins
+   78  clear
+   79  more /var/lib/jenkins/secrets/initialAdminPassword
+   80  history
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
