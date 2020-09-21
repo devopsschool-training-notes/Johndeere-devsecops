@@ -1,0 +1,277 @@
+Johndeere
+=================
+
+1 2 3 4 5 6 7 8 9 0 
+===============================
+Rajesh Kumar
+================
+Demo Env - AWS
+Lab Env - AWS
+===============
+10: AM - 6 PM
+===================
+1 Lunch hour - 1 hour === 1 PM - 2 PM?
+2 Break - 15 mins
+===============================
+=================================================='
+Docker -> jenkins -> CT -> Coverage -> DevSecOps -> Security 
+===========================================================
+Why you should learn all these tools?
+===========================================
+Johndeere
+- Immdiate release
+- save cost
+- Improve a Quality
+ + Security
+
+https://www.devopsschool.com/path/
+====================================================================================
+Consumptions								App & Device
+-------------------------------------------------------------------------------------
+		Desktop		(Internet)	Hypervisor		Docker			
+		Physical Ser			V Server		Container	
+----------------------------------------------------
+Soft Arch	Monolitic			SOA			Microservice
+
+Soft Dev Model  waterfall			Agile			DevOps  ==> DevSecOps
+										(SRE)
+
+Rel Cycle	1 YEAR				2 week			IMM Re - 5 mins - 10 mins		
+
+LOC		Team(5M)			Team(5M)		2
+		20 				10
+==============================================================================================
+What is DevOps?
+	A person
+		Who can code for the Product?			DEV+QA		[ ENG ]
+		Who can code for the testing a Product?		DEV+QA		[ ENG ]
+		Who can code for the infra and ops for the  Product?	Ops	[ ENG ]
+		Plus security
+		====Dev Sec Ops
+
+==============================================================================================
+Docker = 4 Hours [ 3 Hours + 1 hours ]
+=======================
+IT Finance
+=======================
+What is Docker?
+===================
+	Container mgmt tool
+	Written in GoLang
+	Soloman hykes
+	Releasse
+		Community  - Free & Open Source
+		Enterprise  - Paid
+	
+	
+	mgmt ---- You know very well
+	tool -----
+			Save time
+			Save Cost
+			Impro eff
+			=======================
+			TO RUN APP
+	Container 
+	-----------------
+	User NS
+		powered with
+				ONE NET
+				ONE MNT	
+					ROOTFS ==> USERFS + APP FS
+					==========================
+						DOCKER Image
+				ONE PID
+
+	Container is a independent run time env, portable for APP.
+	
+	
+Where to run app? How to run app? what are the components needed to run app?
+================================================================================
+PHYSCIAL Server			Virtual Server			Container
+OS				HYPERVISOR			Docker
+APP				VM				??
+				OS				??
+				APP				??
+==============================================
+2 hours				5 mins
+what are the components needed to run app?
+-----------------------------------------------------------
+OS
+	KERNAL
+		Namespace
+			NET	======> ONE
+			MOUNT	======> ONE
+			PID	======> ONE	
+			USERS =======> MANY
+		Cgroups	
+			helps u to manage cpu+ram to pid
+		Capabilties
+			Which user is root or not root..					
+			Decided by this.	
+==========================================================
+
+PC - Personsal Computing 
+=======================
+MNT === Filesystem(S)
+
+BOOTFS ==> ROOTFS + USERFS + APPFS
+KERNAL	
+
+===============================
+pHYSCIAL === BOOTFS ==> ROOTFS + USERFS + APPFS
+VM === BOOTFS ==> ROOTFS + USERFS + APPFS
+Container ==> ROOTFS + USERFS + APPFS
+	
+
+
+Why Docker?
+==================
+
+Docker Architecutre
+================================
+
+Human => Docker Client ---> Docker Deamon --> ContainerD --> Kernal
+         ===================================
+		Docker Engine
+	
+Docker Components
+==============================
+Docker Engine
+
+Docker Image = ROOT(FS) + USER(FS) + APP(FS)
+
+Docker Registry
+		Repository
+			 FileSystems of APP AKA Docker image
+
+		PUB
+			hub.docker.com
+			google registry
+
+		PVT
+			ECR
+			Artifactory
+			Nexus
+Docker Container
+	when you run an image
+			- ONE USER NS
+				MOUNTED with IMAGE
+				One NET NS
+				ONE PID
+			
+
+==============================
+
+Docker Installation		DONE
+Contiainer LifeCycle
+How to consume container
+==============================
+13.232.175.28
+centos
+Password - KEY
+
+https://www.devopsschool.com/tutorial/docker/install-config/docker-install-commuityedition-centos-rhel.html
+
+Docker Workflow
+==============================
+Humna --> Create a Cont from one image
+	   ------------
+		client	-----> Docker Deamon
+				Check
+				Image is available in Local Registry
+				YES - create a container..
+					Docker Deamon --> ContainerD --> Keranal
+				NO
+					Pull image to Local Registry
+					Docker Deamon --> ContainerD --> Keranal
+
+Container LifeCycle
+========================================================================
+create => start => stop -> start => restart => pause => unpause => kill => remove
+
+Jenkins
+================
+OS => JDK => Jenkins
+BOOTS + ROOTFS + JDK + Jenkins
+	======================
+		Docker image
+WEB - 8080
+Node - 50000
+
+
+
+ 1  clear
+    2  docker images
+    3  docker pull jenkins
+    4  clear
+    5  ls
+    6  docker images
+    7  docker ps
+    8  docker ps -a
+    9  docker create jenkins
+   10  docker ps
+   11  docker ps -a
+   12  docker start jenkins
+   13  docker start bcc22230ac07
+   14  docker ps
+   15  clear
+   16  docker stop bcc22230ac07
+   17  docker ps
+   18  docker ps -a
+   19  docker start bcc22230ac07
+   20  docker ps -a
+   21  docker restart bcc22230ac07
+   22  docker ps -a
+   23  docker restart bcc22230ac07
+   24  docker ps -a
+   25  clear
+   26  docker pause  bcc22230ac07
+   27  docker ps -a
+   28  docker unpause  bcc22230ac07
+   29  docker ps -a
+   30  docker kill  bcc22230ac07
+   31  docker ps -a
+   32  docker rm  bcc22230ac07
+   33  docker ps -a
+   34  history
+
+Questions - Assignment
+====================
+stop vs kill 
+pause vs unpause 
+
+
+Jasvanth Surya Mallavalli	13.233.18.194
+Gaurav Vidyadhar Joshi	13.233.186.4
+Heenal Chawda	13.233.93.136
+Gaurav Sortekar	13.127.141.102
+samir magar	13.234.33.64
+Amrit Sharma	13.233.92.157
+Maynk Ramani	13.233.35.224
+Mohammad Fahad	13.233.109.49
+pavitrata verma	13.234.136.31
+Anumeha Deepak	13.127.157.78
+Dinkar Pradip Chaudhari	13.233.107.83
+Shashikant Kale	13.232.242.22
+Digvesh Singh	52.66.203.212
+Pankaj Bharambe	65.0.26.133
+Prashant Vaishampayan	15.206.166.239
+Akash Doshi	15.206.159.214
+Rohit Sahoo	65.0.29.172
+Gaurav Gadge	13.233.208.62
+Rasmi Perua	13.232.202.242
+Vijay Dikondwar	52.66.88.251
+Madhura Ghatage	52.66.209.228
+	15.206.159.128
+	65.0.26.246
+	15.206.68.213
+
+Username - centos
+PPK - https://www.devopsschool.com/notes/docker/2019/
+		rajesh-mumbai.ppk
+
+
+
+
+
+
