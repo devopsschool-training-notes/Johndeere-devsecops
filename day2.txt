@@ -1,0 +1,110 @@
+http://52.66.243.213:8080/
+devops
+devops123
+=================================
+What is jenkins? - DONE
+What is CI? - DONE
+How to install CI jenkins - DONE
+
+Other tools - 
+Teamcity - Bamboo - TravisCI - GitlbaCI - TFSCI
+https://www.devopsschool.com/top10tools/
+========================================
+Architecture of Jenkins
+===============================
+https://www.devopsschool.com/blog/jenkins-architecture-explained
+
+- Web Bases
+
+WEB server	= by Human == to Do setup Project == For Automting our daily tasks
+		= 8080
+		= WEB UI
+		= Master Node
+Build server	= By WEB server == to do Executing Project Task's and report to back Web.
+		= ANy PORT
+		= Slave node
+		= Master node is also slave node
+
+Human ===> Web ======================> Node
+
+			TCP
+				       slave.jar or remoting.jar
+========================================================================
+Workflow on Jenkins
+=======================
+FOLDER aka Project/Team name
+		Job1
+		 	Step(s)	
+			Step 1
+			Step 2
+			Step 3
+			Step 4
+			Step 5
+				Scheduled
+				Linked with other jobs
+				Dashboard
+				Feedback via many ways including email.
+	
+		Job2
+		 	Step(s)	
+			Step 1
+			Step 2
+			Step 3
+			Step 4
+			Step 5
+============================================
+Build a Project A Manually???
+	- pseudocode
+	Step 1- Download and Install JAVA	command are in form of Plugins
+	Step 2- Setup java path			command are in form of Plugins
+	Step 3- DOwnload Source code		command are in form of Plugins
+	Step 4 - Download 3rd partyy lib	command are in form of Plugins
+	Step 5 - Set required env		command are in form of Plugins
+	Step 6 - Compile it			command are in form of Plugins
+	Step 7 - Unit Testing			command are in form of Plugins
+	Step 8 - Package a jar			command are in form of Plugins
+	Step 9 - Upload to Repo			command are in form of Plugins
+
+=====================================================
+A formula to get started with jenkins
+=====================================================
+What is the technology?
+	JAVA - DOT - PER - PY - RU - Scala - Go
+	version???
+Where is Source Code?
+	Access / branch
+	----- test cases - Build Script - Deploy Script
+What is your builder?
+	Maven 
+	$ mvn clean compile
+	$ mvn clean test
+	$ mvn clean package
+When you want to trigger/scheduled this job?
+	every 10 mins.
+	
+Whom you want to deliver a feedback - email
+	rajesh@devopschool.com
+=========================================
+What is the technology?
+	JAVA - JDK ??
+Where is Source Code?
+	github
+	https://github.com/devops-school/helloworld-java-maven
+When you want to trigger/scheduled this job?
+	every 10 mins.
+What is your builder?
+	Maven 
+	$ mvn clean compile
+	$ mvn clean test
+	$ mvn clean package
+
+Whom you want to deliver a feedback - email
+	rajesh@devopschool.com	
+
+==========================================
+JOB === Project === Item
+
+
+
+
+			
