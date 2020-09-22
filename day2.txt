@@ -212,7 +212,30 @@ Optional - Config Team for getting failure for one Job.
 
 
 Qs
-Node
+================================
+- Node
+---------------------
+	Linux
+		SSH
+			IP 		13.233.215.44
+			USER		centos
+			PASS or key	key	
+		Pred - JAVA
+			 ---- remoting.jar(agent)
+			
+	WINDOWS
+
+https://www.devopsschool.com/blog/devopsschool-github-referenece/
+
+
+
+
+
+
+
+
+
+
 
 
 
