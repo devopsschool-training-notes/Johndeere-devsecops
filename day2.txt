@@ -164,11 +164,56 @@ Step 2 - Configure Plugins
 
 Step 3 - Use Plugins in the JOB
 
-Qs
-Node 
+ 
 
 
 http://52.66.243.213:8080/job/Rajeshk/job/package/lastSuccessfulBuild/artifact/target/yoodle-5.0.0.jar
 
 http://52.66.243.213:8080/job/Rajeshk/job/package/lastSuccessfulBuild/artifact/target/
+============================================================================
+Imm Feedback
+=======================
+	Email
+		BY SMTP
+	Plugins - 
+		Mailer Plugin - Basic
+		Email Extension Plugin - Advance
+
+	Chat
+		microsoft team
+		slack
+		skype
+		jabbar
+		1. Install plugins
+		2. Config plu
+		3. use plugins
+
+	Dashboard aka Pipeline
+		- Build Pipeline
+			- Manually Create a Pipeline
+			- Preq ---- ALl JOBS MUST be connected with each other
+				Scan --> Build --> test -> Package
+		- Pipeline
+			- by Code
+				Write in Jenkins Editor
+				or
+				jenkinsfile (call using github)
+=========================================
+Task 1 - Configure scan -> build -> test -> Package jobs integrate
+			            -----   -------
+				    junit   archive
+Task 2 - Connect to Build Pipeline
+
+Task 3 - Create a Pipeline Jobs.
+
+Optional - Config Team for getting failure for one Job.
+		
+
+
+
+Qs
+Node
+
+
+
 			
