@@ -104,6 +104,46 @@ Whom you want to deliver a feedback - email
 ==========================================
 JOB === Project === Item
 
+=========================================================================
+=========================================================================
+Scheduling = Integration = Feedback
+https://www.devopsschool.com/blog/how-to-schedule-and-trigger-a-jenkins-job-automatically/
+=========================================================================
+Scheduling a job
+	@ Fixed Time				======== Build periodically
+	@ Fixed Time && If SCM changes		======== Poll SCM
+	@ Build this job If some other jobs got changes= Build after other projects are built
+	@ If someone pushes code into SCM	======== GitHub hook trigger for GITScm polling 
+	@ Building this project but from API or Script from Remote Location == Trigger builds remotely (e.g., from scripts)
+	@ Build Other projects after or post this project
+					Post Build action --> Bu	cts
+=========================================================================================
+https://www.devopsschool.com/blog/how-to-build-when-a-change-is-pushed-to-github-in-jenkins/
+
+
+Workstaion setup for git
+----------------
+  502  cd /e
+  503  git clone https://github.com/devops-school/helloworld-java-maven
+  504  clear
+  505  ls
+  506  cd helloworld-java-maven/
+  507  clear
+  508  ls
+  509  start .
+  510  git config user.name "Rajesh Kumar"
+  511  git config user.email "rajesh@devopsschool.com"
+  512  clear
+  513  ls
+
+====================================
+
+
+
+https://www.devopsschool.com/blog/how-to-trigger-builds-remotely-in-jenkins/
+
+
+
 
 
 
