@@ -137,14 +137,38 @@ Workstaion setup for git
   513  ls
 
 ====================================
-
-
-
 https://www.devopsschool.com/blog/how-to-trigger-builds-remotely-in-jenkins/
+====================================
+
+PLAN -> Code -> Analsyis -> Build -> UT -> Packaging -> Arch2Repo -> Deploy -> AT -> CodeCoevrage --> Release
+-------------------------------------------------------------------------------------------------------------
+JIRA -> Git  -> Sonar   --> Maven -> Junit -> Jar ----> Nexus ---> Ansible --> Sele -> jacoco -------
+======================================================================================================
+	DONE	            DONE		Jenkins
 
 
+SonarQube Server
+http://52.66.243.213:9000/
+admin
+admin
+
+Scanner - Tools Installed in Jenkins
+
+Code - https://github.com/devopsschool-demo-labs-projects/java-sonarqube-helloworld-src
+
+Rules of Integrating ANY TOOl with Jenkins
+==========================================
+Step 1 - Install Plugins
+
+Step 2 - Configure Plugins
+
+Step 3 - Use Plugins in the JOB
+
+Qs
+Node 
 
 
+http://52.66.243.213:8080/job/Rajeshk/job/package/lastSuccessfulBuild/artifact/target/yoodle-5.0.0.jar
 
-
+http://52.66.243.213:8080/job/Rajeshk/job/package/lastSuccessfulBuild/artifact/target/
 			
