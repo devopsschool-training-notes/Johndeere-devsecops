@@ -1,0 +1,113 @@
+============================================================================
+Project
+============================
+
+Dev --> Push to Github --> Github webbook would triger --> Start Build Jenkins Job --
+									-- BUILD
+									-- TEST
+									-- PACKAGE
+									-- ARCHIVE (Artifactory)
+									-- Deploy2QA (Ansible)
+								=====================================
+									 JENKINS
+Sample Project -   
+https://github.com/devopsschool-projects/java-maven-gradle-spring-petclinic
+
+What is Ansible?
+=================
+	Config mgmt tool
+		for SERVER(S)
+	release
+		Ansible		- CMD - FREE - OS
+		Ansible Tower   - GUI - PAID
+	Written in Python
+	From Redhat
+---------------------------------
+Why Ansible?
+	Deployment
+
+Other tools - Chef - Puppet - Cfengine - Terraform - UDeploy - Octopus Deploy
+
+How Ansible WorkS???
+=============================
+Human  --> ACS  ------SSH--> ARS(S)
+	   LINUX		LINUX 
+				WINDOWS
+
+	-> Playbook	DONE
+	-> INventory	DONE
+	-> Ansible CMD	DONE
+
+What is Playbook?
+=============================
+	- its a code for deployment
+	- yaml format
+	- contents all the steps of deployment
+
+Project 
+==========================
+	- Setup a WEBSERVER(HTTPD)
+	- Copy app file(index.html) into ARS
+	- Start a HTTPD
+
+Package
+https://github.com/devopsschool-training-notes/Johndeere-devsecops/raw/master/softx1.2.zip
+
+
+ACS - 1	35.154.145.8
+ARS - 2 13.232.132.191	& 15.206.70.231
+
+
+https://www.devopsschool.com/blog/how-to-install-ansible-in-centos-7-rhel-7/
+
+$ sudo yum install wget -y
+$ wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+$ yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+$ sudo rpm -i epel-release-latest-7.noarch.rpm
+$ sudo yum install ansible -y
+===========================================
+Write a Playbook?
+-------------------------
+
+
+
+---
+- name: Start the Play          
+  hosts: webserver
+  tasks:
+  - name: install the latest version of Apache
+    yum:
+      name: httpd
+      state: present
+
+  - name: install the latest version of unzip
+    yum:
+      name: unzip
+      state: present
+
+  - name: Download softx1.2.zip
+    get_url:
+      url: https://github.com/devopsschool-training-notes/Johndeere-devsecops/raw/master/softx1.2.zip
+      dest: /tmp
+
+  - name: Unarchive a file that is already on the remote machine
+    unarchive:
+      src: /tmp/softx1.2.zip
+      dest: /var/www/html/
+      remote_src: yes
+
+  - name: Start service httpd, if not running
+    service:
+      name: httpd
+      state: started
+      
+  
+INventory
+=========================
+[root@ip-172-31-31-175 deploy-softx]# more inventory
+[webserver]
+13.232.132.191
+15.206.70.231
+[root@ip-172-31-31-175 deploy-softx]#
+
+    6  ansible-playbook -i inventory deploy.yaml -u centos --key-file=node.pem -b
