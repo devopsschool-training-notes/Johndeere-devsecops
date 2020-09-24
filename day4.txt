@@ -160,11 +160,18 @@ Step 4 - Run Scanner on the SourceCode
 	C:\tools\sonar-scanner-4.4.0.2170-windows\bin\sonar-scanner.bat
 Step 5 - Analyze on Dashboard
 
-
-
-
-
-
+===============================
+How to install Jmeter
+============================
+	- Install JDK 8 or 11
+	- Set JAVA_HOME
+	- Download Jmeters
+	- Extract to C 
+	- download plugins manager into C:\tools\apache-jmeter-5.3\lib\ext
+ 			https://jmeter-plugins.org/wiki/PluginsManager/
+	- go into bin and find jmeter.bat
+	https://www.guru99.com/jmeter-performance-testing.html
+	
 
 
 
