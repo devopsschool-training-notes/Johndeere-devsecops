@@ -1,0 +1,177 @@
+SAST
+	Code Analysis	
+		Sonarqube
+	LINTING
+	Secret Scanner
+DAST
+	(Veracode)
+
+Jemeter		- Performance TESTING
+Selenium 	- WEB testing
+Jacoco		- Code Coverage
+===============================================
+Jerboa scan
+==================================================================
+What is SonarQube?
+-------------------------
+	Quality management tool
+	
+	Quality 
+	- Code
+		- Static Code Quality
+	- Test Quality
+		- Code Coverage 
+	Release
+		Community - FREE
+		Dev
+		Enterprise
+	Has SonarQube Lint
+	Written in Java
+	By SonarSource
+	Based out on Plugins
+			- You can extend a base sonarqube feature
+
+Static Code Quality
+===========================
+Scan a Code
+	Using Multiple Tools
+	https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis
+
+	Each tool has RULE(S)
+		      ----
+		RULE get applied on the source code and get your feedback.
+
+What is kind Code Quality Matrix you get?
+		Aka 7 Axis of Code Quality
+
+- Coding standards—respect coding standards and follow best practices
+- Potential bugs—eliminate code violations to prevent vulnerabilities﻿
+- Documentation and comments—provide documentation especially for the Public API, the source code
+- Duplicated code—isolates and refines duplications, Don't Repeat Yourself
+- Complexity—equalizes disproportionate distributed complexity among components; eliminates complexity if possible
+- Test coverage—writes unit tests, especially for complex parts of the software
+- Design and architecture—minimize dependencies
+
+How SonarQube Works?
+	SonarQube Architecture
+	
+SonarQube Components
+-=-----------------------------------
+SonarQube Server
+		WEb
+			Projects
+				Issues
+					What kind of issues
+						Who 
+						What
+						How 
+						When
+						Where 
+			Rules
+		DB
+			ANY RDBMS
+			Default - H2
+		Indexing
+				by ElasicSearch
+SonarQube Scanner
+		CMD	- This is part of training
+		Maven
+		Gradle
+		MSBuild
+		Ant
+		jenkins
+
+Source Code
+		can be in 27 languages
+		https://www.sonarqube.org/features/multi-languages/
+
+==================================================================
+Other tools -
+https://www.devopsschool.com/blog/top-10-static-code-analysis-tool/
+
+How to install SonarQube?
+		Can not run with root coz of Elasticsearch
+		JRE or JDK
+
+13.233.23.4
+
+with root
+-------------------
+  1  clear
+    2  ls
+    3  exit
+    4  yum install wget unzip -y
+    5  sudo yum install java-11-openjdk-devel
+    6  clear
+    7  ls
+
+
+without root
+-------------------
+
+    4  wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.4.1.35646.zip
+    5  unzip sonarqube-8.4.1.35646.zip
+    6  clear
+    7  ls
+    8  mv sonarqube-8.4.1.35646 sonarqube
+    9  clear
+   10  ls
+   11  cd sonarqube
+   12  sl
+   13  ls
+   14  cd conf
+   15  ls
+   16  clear
+   17  ls
+   18  more sonar.properties
+   19  clear
+   20  ls
+   21  cd ..
+   22  ls
+   23  cd bin/
+   24  ls
+   25  cd linux-x86-64
+   26  ls
+   27  ./sonar.sh
+   28  ./sonar.sh start
+   29  ./sonar.sh status
+   30  history
+
+
+
+http://13.233.23.4:9000/
+admin
+admin
+
+===============================================
+Basic Workflow in SonarQube
+===============================================
+Step 1 - Download Source Code
+		https://github.com/devopsschool-demo-labs-projects/java-sonarqube-helloworld-src
+		https://www.devopsschool.com/tutorial/sonarqube/sonarqube-properties.html
+		https://github.com/SonarSource/sonar-scanning-examples
+Step 2 - Download Scanner
+		https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
+
+Step 3 - Config a scanner with SonarQube Server
+
+Step 4 - Run Scanner on the SourceCode
+	/home/centos/scanner/bin/sonar-scanner
+	C:\tools\sonar-scanner-4.4.0.2170-windows\bin\sonar-scanner.bat
+Step 5 - Analyze on Dashboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
